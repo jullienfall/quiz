@@ -38,6 +38,7 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 4px;
+    transition: ease 0.3s;
 }
 
 .container-deck__btn {

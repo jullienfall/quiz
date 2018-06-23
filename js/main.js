@@ -39,6 +39,7 @@ function getQuestion() {
         clearInterval(timer);
     } else {
         document.querySelector('.container-deck').style.display = 'block';
+         document.querySelector('.container-deck').style.opacity = 100;
         document.querySelector('.container-deck__question').innerHTML = data[0].question;
         document.querySelector('.container-deck__btn--one').innerHTML = data[0].answers[0].answer;
         if (data[0].answers[0].correct === true) {
@@ -52,6 +53,8 @@ function getQuestion() {
 }
 
 function selectAnswer(answer) {
+    document.querySelector('.container-deck').style.opacity = 0;
+    
     if (answer === true) {
         score += 1;
     } else {
@@ -60,7 +63,7 @@ function selectAnswer(answer) {
     data.splice(0, 1);
     firstButton = false;
     secondButton = false;
-    getQuestion();
+    setTimeout(getQuestion, 300);
 }
 
 document.querySelector('.container__btn').addEventListener('click', startQuiz);
