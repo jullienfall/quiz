@@ -38,7 +38,6 @@ function getQuestion() {
         document.querySelector('.container-deck').style.display = 'none';
         clearInterval(timer);
     } else {
-        document.querySelector('.container-deck').style.display = 'block';
         document.querySelector('.container-deck').style.opacity = 100;
         document.querySelector('.container-deck__question').innerHTML = data[0].question;
         document.querySelector('.container-deck__btn--one').innerHTML = data[0].answers[0].answer;
@@ -54,7 +53,6 @@ function getQuestion() {
 
 function selectAnswer(answer) {
     document.querySelector('.container-deck').style.opacity = 0;
-    
     if (answer === true) {
         score += 1;
     } else {
