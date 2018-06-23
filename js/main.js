@@ -24,13 +24,13 @@ getData();
 // start Quiz
 
 function startQuiz() {
+    document.querySelector('.container-deck').style.display = 'block';
+    document.querySelector('.container__btn').style.display = 'none';
     timer = setInterval(setTime, 1000);
-    getQuestion();
+    setTimeout(getQuestion, 300);
 }
 
 function getQuestion() {
-    document.querySelector('.container__btn').style.display = 'none';
-
     if (data.length === 0) {
         document.querySelector('.container-result__score').innerHTML = score;
         document.querySelector('.container-result__mistakes').innerHTML = mistakes;
@@ -39,7 +39,7 @@ function getQuestion() {
         clearInterval(timer);
     } else {
         document.querySelector('.container-deck').style.display = 'block';
-         document.querySelector('.container-deck').style.opacity = 100;
+        document.querySelector('.container-deck').style.opacity = 100;
         document.querySelector('.container-deck__question').innerHTML = data[0].question;
         document.querySelector('.container-deck__btn--one').innerHTML = data[0].answers[0].answer;
         if (data[0].answers[0].correct === true) {

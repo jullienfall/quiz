@@ -32,6 +32,7 @@ body {
 
 .container-deck {
     display: none;
+    opacity: 0;
     max-width: 450px;
     background-color: #5178ce;
     color: #fff;
@@ -55,4 +56,10 @@ body {
     background: #fff;
     padding: 20px 50px;
     border-radius: 4px;
+}
+.container-result__score {
+    color: #1ab21a;
+}
+.container-result__mistakes {
+    color: #ff0000;
 }
