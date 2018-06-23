@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <button class="btn container__btn">Start the Quiz!</button>
+        <div class="container-deck">
+            <h2 class="sg-header-secondary container-deck__question"></h2>
+            <div>
+                <button class="btn container-deck__btn container-deck__btn--one"></button>
+                <button class="btn container-deck__btn container-deck__btn--two"></button>
+            </div>
+        </div>
+        <div class="container-result">
+            <h3>Questions resolved: <span class="container-result__score"></span></h3>
+            <h3>Mistakes: <span class="container-result__mistakes"></span></h3>
+            <h3>Time: <span class="container-result__minutes"></span>:<span class="container-result__seconds"></span></h3>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
